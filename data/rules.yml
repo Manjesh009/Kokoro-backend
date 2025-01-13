@@ -1,0 +1,66 @@
+rules:
+- rule: Rule for ask_arrhythmia
+  steps:
+  - intent: ask_arrhythmia
+  - action: utter_ask_arrhythmia
+- rule: Rule for ask_heart_health
+  steps:
+  - intent: ask_heart_health
+  - action: utter_ask_heart_health
+- rule: Rule for ask_general
+  steps:
+  - intent: ask_general
+  - action: utter_ask_general
+- rule: Rule for greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: Rule for ask_hypertension
+  steps:
+  - intent: ask_hypertension
+  - action: utter_ask_hypertension
+- rule: Rule for ask_stroke
+  steps:
+  - intent: ask_stroke
+  - action: utter_ask_stroke
+- rule: Rule for ask_aortic_aneurysm
+  steps:
+  - intent: ask_aortic_aneurysm
+  - action: utter_ask_aortic_aneurysm
+- rule: Rule for ask_cardiomyopathy
+  steps:
+  - intent: ask_cardiomyopathy
+  - action: utter_ask_cardiomyopathy
+- rule: Rule for ask_testing
+  steps:
+  - intent: ask_testing
+  - action: utter_ask_testing
+- rule: Rule for ask_pain
+  steps:
+  - intent: ask_pain
+  - action: utter_ask_pain
+- rule: Rule for ask_heart_attack
+  steps:
+  - intent: ask_heart_attack
+  - action: utter_ask_heart_attack
+- rule: Rule for ask_cad
+  steps:
+  - intent: ask_cad
+  - action: utter_ask_cad
+- rule: Rule for ask_pericarditis
+  steps:
+  - intent: ask_pericarditis
+  - action: utter_ask_pericarditis
+- rule: Rule for ask_pad
+  steps:
+  - intent: ask_pad
+  - action: utter_ask_pad
+- rule: Rule for ask_endocarditis
+  steps:
+  - intent: ask_endocarditis
+  - action: utter_ask_endocarditis
+- rule: Rule for ask_family
+  steps:
+  - intent: ask_family
+  - action: utter_ask_family
+version: '3.1'

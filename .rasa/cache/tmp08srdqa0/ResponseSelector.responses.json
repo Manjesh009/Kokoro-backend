@@ -1,0 +1,17 @@
+{
+  "utter_ask_how_does_a_nuclear_stress_test_(spect/pet)_assess_myocardial_ischemia_and_viability?": [
+    {
+      "text": "A nuclear stress test uses radioisotopes (like Tc-99m or rubidium-82) to assess myocardial perfusion during rest and stress conditions. In SPECT, the images obtained show the blood flow distribution, identifying regions of ischemia. PET provides higher resolution and better quantitative assessment, detecting metabolic changes in the myocardium and offering insights into myocardial viability and ischemic territory."
+    }
+  ],
+  "utter_ask_how_is_cardiac_pet/ct_used_to_assess_both_coronary_artery_disease_and_myocardial_viability?": [
+    {
+      "text": "Cardiac PET/CT combines the advantages of CT angiography (for high-resolution anatomical imaging) and PET (for metabolic and functional imaging). This hybrid approach provides a comprehensive assessment of coronary artery disease (through CT coronary angiography) and myocardial perfusion and viability (via PET scanning), offering insights into both the coronary anatomy and the functional status of the myocardium."
+    }
+  ],
+  "utter_ask_what_is_the_significance_of_using_multimodality_imaging_(e.g.,_combining_nuclear_scans_with_ct/mri)?": [
+    {
+      "text": "Multimodality imaging combines data from different imaging techniques, such as nuclear scans, CT, and MRI, to provide a more comprehensive view of both anatomical structure and functional performance of the heart. This allows for more precise diagnosis and treatment planning, particularly in complex cases like coronary artery disease or heart failure."
+    }
+  ]
+}
