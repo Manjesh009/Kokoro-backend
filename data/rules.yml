@@ -1,20 +1,24 @@
 rules:
-- rule: Rule for ask_arrhythmia
-  steps:
-  - intent: ask_arrhythmia
-  - action: utter_ask_arrhythmia
-- rule: Rule for ask_heart_health
-  steps:
-  - intent: ask_heart_health
-  - action: utter_ask_heart_health
-- rule: Rule for ask_general
-  steps:
-  - intent: ask_general
-  - action: utter_ask_general
 - rule: Rule for greet
   steps:
   - intent: greet
   - action: utter_greet
+- rule: Rule for goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Rule for ask_arrhythmia
+  steps:
+  - intent: ask_arrhythmia
+  - action: utter_ask_arrhythmia
+- rule: Rule for ask_general
+  steps:
+  - intent: ask_general
+  - action: utter_ask_general
+- rule: Rule for ask_heart_health
+  steps:
+  - intent: ask_heart_health
+  - action: utter_ask_heart_health
 - rule: Rule for ask_hypertension
   steps:
   - intent: ask_hypertension

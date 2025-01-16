@@ -9,10 +9,6 @@ KEYWORD_TO_INTENT = {
     "pain": "ask_pain",
     "test": "ask_testing",
     "family": "ask_family",
-    "hello": "greet",
-    "hi": "greet",
-    "bye": "goodbye",
-    "goodbye": "goodbye",
     "arrhythmia": "ask_arrhythmia",
     "coronary artery disease": "ask_cad",
     "rheumatic heart disease": "ask_rheumatic_heart_disease",
@@ -50,6 +46,7 @@ def process_data(dataframe):
     """Process the Excel data to generate intents and responses."""
     intents = {}
     responses = {}
+    fixed_intents = {}  # Tracks explicitly defined intents and their associated questions
 
     for _, row in dataframe.iterrows():
         if pd.isna(row["Question"]) or pd.isna(row["Answer"]):
@@ -58,8 +55,22 @@ def process_data(dataframe):
         question = row["Question"].strip()
         answer = row["Answer"].strip()
 
-        # Determine intent based on keywords
-        intent = get_intent_from_question(question)
+        # Check if 'Intent' column exists and has a valid value
+        if "Intent" in dataframe.columns and not pd.isna(row["Intent"]):
+            intent = clean_intent_name(row["Intent"].strip())
+            
+            # Handle explicitly defined intents
+            if intent not in fixed_intents:
+                fixed_intents[intent] = set()
+            fixed_intents[intent].add(question)
+        else:
+            # Fallback to keyword-based intent determination
+            intent = get_intent_from_question(question)
+
+        # Log potential conflicts instead of raising an error
+        if intent in fixed_intents and question not in fixed_intents[intent]:
+            print(f"⚠️ Potential conflict detected for intent '{intent}' with question: '{question}'")
+            fixed_intents[intent].add(question)  # Allow the question to be added
 
         # Group questions under the same intent
         if intent not in intents:
@@ -72,6 +83,8 @@ def process_data(dataframe):
         responses[intent].append(answer)
 
     return intents, responses
+
+
 
 def write_nlu_yaml(intents, filename="data/nlu.yml"):
     """Write the NLU data to a YAML file."""

@@ -1,0 +1,48 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pericarditis\"}}]": "utter_ask_pericarditis",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pericarditis\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_pericarditis\"}, \"user\": {\"intent\": \"ask_pericarditis\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_endocarditis\"}}]": "utter_ask_endocarditis",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_endocarditis\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_endocarditis\"}, \"user\": {\"intent\": \"ask_endocarditis\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_general\"}}]": "utter_ask_general",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_general\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_general\"}, \"user\": {\"intent\": \"ask_general\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cad\"}}]": "utter_ask_cad",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cad\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_cad\"}, \"user\": {\"intent\": \"ask_cad\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_aortic_aneurysm\"}}]": "utter_ask_aortic_aneurysm",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_aortic_aneurysm\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_aortic_aneurysm\"}, \"user\": {\"intent\": \"ask_aortic_aneurysm\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_heart_health\"}}]": "utter_ask_heart_health",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_heart_health\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_heart_health\"}, \"user\": {\"intent\": \"ask_heart_health\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_hypertension\"}}]": "utter_ask_hypertension",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_hypertension\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_hypertension\"}, \"user\": {\"intent\": \"ask_hypertension\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pain\"}}]": "utter_ask_pain",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pain\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_pain\"}, \"user\": {\"intent\": \"ask_pain\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_stroke\"}}]": "utter_ask_stroke",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_stroke\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_stroke\"}, \"user\": {\"intent\": \"ask_stroke\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cardiomyopathy\"}}]": "utter_ask_cardiomyopathy",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cardiomyopathy\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_cardiomyopathy\"}, \"user\": {\"intent\": \"ask_cardiomyopathy\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_arrhythmia\"}}]": "utter_ask_arrhythmia",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_arrhythmia\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_arrhythmia\"}, \"user\": {\"intent\": \"ask_arrhythmia\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pad\"}}]": "utter_ask_pad",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_pad\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_pad\"}, \"user\": {\"intent\": \"ask_pad\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_family\"}}]": "utter_ask_family",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_family\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_family\"}, \"user\": {\"intent\": \"ask_family\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_heart_attack\"}}]": "utter_ask_heart_attack",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_heart_attack\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_heart_attack\"}, \"user\": {\"intent\": \"ask_heart_attack\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_testing\"}}]": "utter_ask_testing",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_testing\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_testing\"}, \"user\": {\"intent\": \"ask_testing\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

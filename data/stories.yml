@@ -1,20 +1,24 @@
 stories:
 - steps:
+  - intent: greet
+  - action: utter_greet
+  story: Story for greet
+- steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  story: Story for goodbye
+- steps:
   - intent: ask_arrhythmia
   - action: utter_ask_arrhythmia
   story: Story for ask_arrhythmia
-- steps:
-  - intent: ask_heart_health
-  - action: utter_ask_heart_health
-  story: Story for ask_heart_health
 - steps:
   - intent: ask_general
   - action: utter_ask_general
   story: Story for ask_general
 - steps:
-  - intent: greet
-  - action: utter_greet
-  story: Story for greet
+  - intent: ask_heart_health
+  - action: utter_ask_heart_health
+  story: Story for ask_heart_health
 - steps:
   - intent: ask_hypertension
   - action: utter_ask_hypertension

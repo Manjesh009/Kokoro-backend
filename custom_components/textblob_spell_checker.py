@@ -17,6 +17,7 @@ class CustomNLUComponent(GraphComponent):
         self.config = config
         self.resource = resource
         self.threshold = config.get("threshold", 0.5)
+        self.batch_size = config.get("batch_size", 50)  # Default batch size
 
     @classmethod
     def create(
@@ -28,29 +29,37 @@ class CustomNLUComponent(GraphComponent):
     ) -> GraphComponent:
         return cls(config, resource)
 
-    def train(self, training_data: TrainingData) -> Resource:
-        for example in training_data.training_examples:
+    def _process_batch(self, batch: List[Message]) -> None:
+        """Processes a batch of training examples."""
+        for example in batch:
             text = example.get("text")
             if text:
-                blob = TextBlob(text)
-                corrected_text = str(blob.correct())
-                example.set("text", corrected_text)
+                try:
+                    blob = TextBlob(text)
+                    corrected_text = str(blob.correct())
+                    example.set("text", corrected_text)
+                except Exception as e:
+                    print(f"Error processing text: {text[:50]}... - {e}")
+
+    def train(self, training_data: TrainingData) -> Resource:
+        examples = training_data.training_examples
+        total_examples = len(examples)
+
+        # Process in batches
+        for i in range(0, total_examples, self.batch_size):
+            batch = examples[i:i + self.batch_size]
+            print(f"Processing batch {i // self.batch_size + 1} of {total_examples // self.batch_size + 1}...")
+            self._process_batch(batch)
+
         return self.resource
 
-    def process_training_data(self, training_data: TrainingData) -> TrainingData:
-        for example in training_data.training_examples:
-            text = example.get("text")
-            if text:
-                blob = TextBlob(text)
-                corrected_text = str(blob.correct())
-                example.set("text", corrected_text)
-        return training_data
-
     def process(self, messages: List[Message]) -> List[Message]:
-        for message in messages:
-            text = message.get("text")
-            if text:
-                blob = TextBlob(text)
-                corrected_text = str(blob.correct())
-                message.set("text", corrected_text, add_to_output=True)
+        total_messages = len(messages)
+
+        # Process in batches
+        for i in range(0, total_messages, self.batch_size):
+            batch = messages[i:i + self.batch_size]
+            print(f"Processing batch {i // self.batch_size + 1} of {total_messages // self.batch_size + 1}...")
+            self._process_batch(batch)
+
         return messages
